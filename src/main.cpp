@@ -14,7 +14,7 @@ Adafruit_MCP23X17 mcp;
 MAX6675 thermocouples[NUM_MAX6675]; // Array to hold MAX6675 instances
 
 // Pin mappings for each MAX6675 module
-const uint8_t THERMO_CS_PINS[NUM_MAX6675] = {0, 3, 6, 9, 12};
+const uint8_t THERMO_CS_PINS[NUM_MAX6675] = {0, 3, 6, 9, 12};// Pin connected to CS pin of MAX6675
 const uint8_t THERMO_DO_PINS[NUM_MAX6675] = {1, 4, 7, 10, 13};
 const uint8_t THERMO_CLK_PINS[NUM_MAX6675] = {2, 5, 8, 11, 14};
 
