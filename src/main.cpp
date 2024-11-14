@@ -7,7 +7,7 @@
 #include <Nextion.h>
 
 // Pin definitions for MCP23017
-#define MCP23017_ADDR 0x20 // Address of MCP23017
+#define MCP23017_ADDR 0x20 // Address of MCP23017 to read the temperature from the ther mocouples
 #define NUM_MAX6675 5      // Number of MAX6675 modules
 
 Adafruit_MCP23X17 mcp;
@@ -133,7 +133,7 @@ void loop()
   {
     doorOpen = true;
     ledcWrite(0, 0);                 // Stop the fan        // Stop the fan
-    doorStatus.setText("Door Open"); // Display door open message on Nextion display
+    doorStatus.setText("Door Opened"); // Display door open message on Nextion display
     delay(1000);                     // Delay to prevent flickering
     return;                          // Exit loop iteration
   }
@@ -158,7 +158,7 @@ void loop()
     Serial.println(temperatures[i]);
   }
 
-  // Compute average temperature
+  // Compute and average temperature
   double avgTemperature = 0;
   for (int i = 0; i < NUM_MAX6675; i++)
   {
