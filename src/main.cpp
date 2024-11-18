@@ -31,7 +31,27 @@ const double Ki = 0.1;
 const double Kd = 0.1;
 
 bool doorOpen = false;
-
+// PID controller
+/**
+ * @class PIDController
+ * @brief Implements a PID controller for process control.
+ *
+ * This class provides methods to set a desired setpoint and compute the control
+ * output based on the current input using proportional, integral, and derivative
+ * gains.
+ *
+ * @param Kp Proportional gain.
+ * @param Ki Integral gain.
+ * @param Kd Derivative gain.
+ *
+ * @method setSetpoint Sets the desired setpoint for the PID controller.
+ * @param setpoint The target value the controller aims to achieve.
+ *
+ * @method compute Calculates the control output based on the current input.
+ * @param input The current process variable.
+ * @return The computed control output.
+ */
+ 
 class PIDController
 {
 public:
